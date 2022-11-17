@@ -2,14 +2,14 @@
   <div class="Home">
     <h1>Home</h1>
     <div class="row">
-      <div class="col-md-6 col-lg6" v-for="(data, index) in categories" :key="index">
+      <div class="col-md-6 col-lg-6" v-for="(data, index) in categories" :key="index">
         <button type="button" class="btn btn-primary" @click="goTocategory(data.categoryId)">{{ data.categoryTitle
         }}</button>
       </div>
     </div>
     <hr />
     <div class="row">
-      <div class="col-md-4 col-lg4" v-for="(data, index) in products" :key="index">
+      <div class="col-md-4 col-lg-4" v-for="(data, index) in products" :key="index">
         <h3 @click="goTodetail(data.productId)">{{ data.productTitle }}</h3>
         <img :src="data.image" class="img-fluid">
         <h4>{{ data.productPrice }}</h4>
@@ -86,9 +86,5 @@ li {
 
 a {
   color: #42b983;
-}
-
-button {
-  background-color: rgb(20, 131, 235);
 }
 </style>

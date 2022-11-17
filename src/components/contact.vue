@@ -2,7 +2,7 @@
   <div class="contact">
     <h1>{{ title }}</h1>
     <div class="row">
-      <div class="col-md-4 col-lg4" v-for="(data, index) in products" :key="index">
+      <div class="col-md-4 col-lg-4" v-for="(data, index) in products" :key="index">
         <h3 @click="goTodetail(data.productId)">{{ data.productTitle }}</h3>
         <img :src="data.image" class="img-fluid">
         <h4>{{ data.productPrice }}</h4>
