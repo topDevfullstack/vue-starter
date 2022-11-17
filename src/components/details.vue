@@ -1,15 +1,17 @@
 <template>
   <div class="details">
-    <h1>{{ title }}</h1>
-    <!-- <div class="container">
-      <div class="col-md-12" v-for="(product, index) in products" :key="index">
-        <div v-if="proId == product.productId">
-          <h1>{{ product.productTitle }}</h1>
-          <img :src="product.image" class="img-fluid">
-          <h2>{{ data.productPrice }}</h2>
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <div class="row">
+        <div class="col-md-12" v-for="(product, index) in products" :key="index">
+          <div v-if="proId == product.productId">
+            <h1>{{ product.productTitle }}</h1>
+            <img :src="product.image" class="img-fluid">
+            <h2>{{ product.productPrice }}</h2>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
