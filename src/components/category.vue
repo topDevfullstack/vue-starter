@@ -10,13 +10,10 @@
 <script>
 export default {
   name: 'category',
-  data() {
+  data () {
     return {
       title: 'Category'
     }
   }
 }
 </script>
-<style scoped>
-
-</style>

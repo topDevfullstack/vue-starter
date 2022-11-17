@@ -21,46 +21,46 @@
 <script>
 export default {
   name: 'Home',
-  data() {
+  data () {
     return {
       title: 'Home',
       categories: [
         {
-          categoryTitle: "Battery",
+          categoryTitle: 'Battery',
           categoryId: 1
         },
         {
-          categoryTitle: "Parts",
+          categoryTitle: 'Parts',
           categoryId: 2
         }
       ],
       products: [
         {
-          productTitle: "ABCN",
+          productTitle: 'ABCN',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 1
         },
         {
-          productTitle: "KARMA",
+          productTitle: 'KARMA',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 2
         },
         {
-          productTitle: "Tino",
+          productTitle: 'Tino',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 3
         }
       ]
     }
   },
   methods: {
-    goTodetail(prodId) {
+    goTodetail (prodId) {
       this.$router.push({ name: 'details', params: { Pid: prodId } })
     },
-    goTocategory(cateId) {
+    goTocategory (cateId) {
       this.$router.push({ name: 'category', params: { Cid: cateId } })
     }
   }

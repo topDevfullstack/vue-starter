@@ -21,27 +21,27 @@
 <script>
 export default {
   name: 'details',
-  data() {
+  data () {
     return {
       proId: this.$route.params.Pid,
-      title: "Details",
+      title: 'Details',
       products: [
         {
-          productTitle: "ABCN",
+          productTitle: 'ABCN',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 1
         },
         {
-          productTitle: "KARMA",
+          productTitle: 'KARMA',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 2
         },
         {
-          productTitle: "Tino",
+          productTitle: 'Tino',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 3
         }
       ]

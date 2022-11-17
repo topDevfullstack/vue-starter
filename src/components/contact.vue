@@ -17,38 +17,35 @@
 <script>
 export default {
   name: 'contact',
-  data() {
+  data () {
     return {
       title: 'Contact',
       products: [
         {
-          productTitle: "ABCN",
+          productTitle: 'ABCN',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 1
         },
         {
-          productTitle: "KARMA",
+          productTitle: 'KARMA',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 2
         },
         {
-          productTitle: "Tino",
+          productTitle: 'Tino',
           image: require('../assets/logo.png'),
-          productPrice: "100$",
+          productPrice: '100$',
           productId: 3
         }
       ]
     }
   },
   methods: {
-    goTodetail(prodId) {
+    goTodetail (prodId) {
       this.$router.push({ name: 'details', params: { Pid: prodId } })
     }
   }
 }
 </script>
-<style scoped>
-
-</style>
