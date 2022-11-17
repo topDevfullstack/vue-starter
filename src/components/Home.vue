@@ -3,7 +3,8 @@
     <h1>Home</h1>
     <div class="row">
       <div class="col-md-6 col-lg6" v-for="(data, index) in categories" :key="index">
-        <button type="button" class="btn btn-primary" @click="goTocategory(data.categoryId)">{{ data.categoryTitle }}</button>
+        <button type="button" class="btn btn-primary" @click="goTocategory(data.categoryId)">{{ data.categoryTitle
+        }}</button>
       </div>
     </div>
     <hr />

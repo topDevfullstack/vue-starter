@@ -10,6 +10,10 @@
             <h2>{{ product.productPrice }}</h2>
           </div>
         </div>
+        <hr />
+        <router-link class="nav-link" to="/">
+          <button type="button" class="btn btn-primary">Return Home Page</button>
+        </router-link>
       </div>
     </div>
   </div>
