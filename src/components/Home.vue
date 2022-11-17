@@ -3,9 +3,7 @@
     <h1>Home</h1>
     <div class="row">
       <div class="col-md-6 col-lg6" v-for="(data, index) in categories" :key="index">
-        <router-link class="nav-link" to="/blog">
-          <button type="button" class="btn btn-primary">{{ data.categoryTitle }}</button>
-        </router-link>
+        <button type="button" class="btn btn-primary" @click="goTocategory(data.categoryId)">{{ data.categoryTitle }}</button>
       </div>
     </div>
     <hr />
@@ -60,6 +58,9 @@ export default {
   methods: {
     goTodetail(prodId) {
       this.$router.push({ name: 'details', params: { Pid: prodId } })
+    },
+    goTocategory(cateId) {
+      this.$router.push({ name: 'category', params: { Cid: cateId } })
     }
   }
 }
