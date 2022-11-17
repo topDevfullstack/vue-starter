@@ -1,21 +1,16 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <button id="battery">Battery</button>
-      </li>
-      <li>
-        <button id="parts">Parts</button>
-      </li>
-    </ul>
+  <div class="Home">
+    <div class="home">
+    <h1>Home</h1>
+    <button type="button" class="btn btn-primary">Battery</button>
+    <button type="button" class="btn btn-primary">Parts</button>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
