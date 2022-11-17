@@ -1,21 +1,24 @@
 <template>
-  <div class="contact">
+  <div class="details">
     <h1>{{ title }}</h1>
-    <div class="row">
-      <div class="col-md-4 col-lg4" v-for="(data, index) in products" :key="index">
-        <h3>{{ data.productTitle }}</h3>
-        <img :src="data.image" class="img-fluid">
-        <h4>{{ data.productPrice }}</h4>
+    <!-- <div class="container">
+      <div class="col-md-12" v-for="(product, index) in products" :key="index">
+        <div v-if="proId == product.productId">
+          <h1>{{ product.productTitle }}</h1>
+          <img :src="product.image" class="img-fluid">
+          <h2>{{ data.productPrice }}</h2>
+        </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
 export default {
-  name: 'contact',
+  name: 'details',
   data() {
     return {
-      title: 'Contact',
+      proId: this.$route.params.Pid,
+      title: "Details",
       products: [
         {
           productTitle: "ABCN",
@@ -40,6 +43,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-
-</style>

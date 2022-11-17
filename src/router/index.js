@@ -4,6 +4,8 @@ import Home from '@/components/Home'
 import blog from '@/components/blog'
 import services from '@/components/services'
 import contact from '@/components/contact'
+import category from '@/components/category'
+import details from '@/components/details'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: contact
+    },
+    {
+      path: '/categories/:slug',
+      name: 'category',
+      component: category
+    },
+    {
+      path: '/details/:Pid',
+      name: 'details',
+      component: details
     }
   ]
 })
