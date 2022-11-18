@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <div class="row">
-      <div class="col-md-12" v-for="(category, index) in categories" :key="index">
+      <div class="col-md-12" v-for="(category, index) in $store.state.categories" :key="index">
         <div v-if="cateId == category.categoryId">
           <h1>{{ title }} {{ category.categoryTitle }}</h1>
           <h5>{{ totalCount }}Counts <span>,</span> TotalAmount: {{ totalAmount }}$</h5>
@@ -10,7 +10,7 @@
     </div>
     <hr />
     <div class="row">
-      <div class="col-md-4 col-lg-4" v-for="(data, index) in products" :key="index">
+      <div class="col-md-4 col-lg-4" v-for="(data, index) in $store.state.products" :key="index">
         <h3 @click="goTodetail(data.productId)">{{ data.productTitle }}</h3>
         <img :src="data.image" class="img-fluid">
         <h4>{{ data.productPrice }}$</h4>
@@ -31,37 +31,7 @@ export default {
       totalCount: 0,
       totalAmount: 0,
       cateId: this.$route.params.Cid,
-      title: 'Category',
-      categories: [
-        {
-          categoryTitle: 'Battery',
-          categoryId: 1
-        },
-        {
-          categoryTitle: 'Parts',
-          categoryId: 2
-        }
-      ],
-      products: [
-        {
-          productTitle: 'ABCN',
-          image: require('../assets/logo.png'),
-          productPrice: 100,
-          productId: 1
-        },
-        {
-          productTitle: 'KARMA',
-          image: require('../assets/logo.png'),
-          productPrice: 200,
-          productId: 2
-        },
-        {
-          productTitle: 'Tino',
-          image: require('../assets/logo.png'),
-          productPrice: 300,
-          productId: 3
-        }
-      ]
+      title: 'Category'
     }
   },
   methods: {
