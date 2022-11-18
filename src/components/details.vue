@@ -8,12 +8,14 @@
             <h1>{{ product.productTitle }}</h1>
             <img :src="product.image" class="img-fluid">
             <h2>{{ product.productPrice }}$</h2>
+            <div v-if="hideDetail == false">
+              <div id="detail-info">This product is very quality.</div>
+            </div>
+            <hr />
+            <button type="button" class="col-md-2  offset-1 btn btn-primary" @click="hideDetail = !hideDetail">Detail Info</button>
+            <button type="button" class="col-md-2 offset-6 btn btn-primary" @click="$router.push('/')">Return Home Page</button>
           </div>
         </div>
-        <hr />
-        <router-link class="nav-link" to="/">
-          <button type="button" class="btn btn-primary">Return Home Page</button>
-        </router-link>
       </div>
     </div>
   </div>
@@ -24,6 +26,7 @@ export default {
   name: 'details',
   data () {
     return {
+      hideDetail: true,
       proId: this.$route.params.Pid,
       title: 'Details',
       products: [
@@ -46,6 +49,11 @@ export default {
           productId: 3
         }
       ]
+    }
+  },
+  methods: {
+    goTodetail (prodId) {
+      this.$router.push({ name: 'details', params: { Pid: prodId } })
     }
   }
 }
