@@ -12,7 +12,7 @@
       <div class="col-md-4 col-lg-4" v-for="(data, index) in products" :key="index">
         <h3 @click="goTodetail(data.productId)">{{ data.productTitle }}</h3>
         <img :src="data.image" class="img-fluid">
-        <h4>{{ data.productPrice }}</h4>
+        <h4>{{ data.productPrice }}$</h4>
       </div>
     </div>
   </div>
@@ -38,19 +38,19 @@ export default {
         {
           productTitle: 'ABCN',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 100,
           productId: 1
         },
         {
           productTitle: 'KARMA',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 200,
           productId: 2
         },
         {
           productTitle: 'Tino',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 300,
           productId: 3
         }
       ]

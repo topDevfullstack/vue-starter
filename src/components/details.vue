@@ -7,7 +7,7 @@
           <div v-if="proId == product.productId">
             <h1>{{ product.productTitle }}</h1>
             <img :src="product.image" class="img-fluid">
-            <h2>{{ product.productPrice }}</h2>
+            <h2>{{ product.productPrice }}$</h2>
           </div>
         </div>
         <hr />
@@ -30,19 +30,19 @@ export default {
         {
           productTitle: 'ABCN',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 100,
           productId: 1
         },
         {
           productTitle: 'KARMA',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 200,
           productId: 2
         },
         {
           productTitle: 'Tino',
           image: require('../assets/logo.png'),
-          productPrice: '100$',
+          productPrice: 300,
           productId: 3
         }
       ]

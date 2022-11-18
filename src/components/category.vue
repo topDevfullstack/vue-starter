@@ -4,7 +4,7 @@
       <div class="col-md-12" v-for="(category, index) in categories" :key="index">
         <div v-if="cateId == category.categoryId">
           <h1>{{ title }} {{ category.categoryTitle }}</h1>
-          <span>{{ totalCount }}Counts {{ totalAmount }}$</span>
+          <h5>{{ totalCount }}Counts <span>,</span> TotalAmount: {{ totalAmount }}$</h5>
         </div>
       </div>
     </div>
