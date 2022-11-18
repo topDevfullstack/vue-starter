@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div class="container Home">
     <h1>Home</h1>
     <div class="row">
       <div class="col-md-6 col-lg-6" v-for="(data, index) in categories" :key="index">
